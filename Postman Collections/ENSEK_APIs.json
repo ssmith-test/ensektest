@@ -252,7 +252,7 @@
 							"    //     return obj.time\r",
 							"    //     });\r",
 							"    // console.log(timeArray)\r",
-							"    var today = new Date();\r",
+							"    var today = new Date().toUTCString();\r",
 							"    console.log(today);\r",
 							"    console.log(new Date(jsonData[0].time).toUTCString())\r",
 							"    console.log(today < jsonData[0].time)\r",
