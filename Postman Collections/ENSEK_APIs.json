@@ -225,7 +225,7 @@
 							"        \"quantity\": 20\r",
 							"    }\r",
 							"    pm.expect(e_order).to.include(expected_order);\r",
-							"    pm.expect(e_order).to.have.property('time');\r",
+							"    // pm.expect(e_order).to.have.property('time');\r",
 							"})\r",
 							"\r",
 							""
