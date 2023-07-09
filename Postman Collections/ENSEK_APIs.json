@@ -214,7 +214,6 @@
 						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
-							"const o_order = jsonData.filter(item => item.Id === pm.variables.get(\"oil_order_id\"))[0];\r",
 							"\r",
 							"pm.test(\"Electric order exists and is correct\", () => {\r",
 							"    const e_order = jsonData.filter(item => item.Id === pm.variables.get(\"electric_order_id\"))[0];\r",
@@ -237,6 +236,7 @@
 							"})\r",
 							"\r",
 							"pm.test(\"Oil order exists and is correct\", () => {\r",
+							"    const o_order = jsonData.filter(item => item.Id === pm.variables.get(\"oil_order_id\"))[0];\r",
 							"    const expected_order = {\r",
 							"        \"fuel\": \"Oil\",\r",
 							"        \"quantity\": 3\r",
