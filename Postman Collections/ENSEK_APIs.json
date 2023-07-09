@@ -214,10 +214,10 @@
 						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
-							"\r",
-							"pm.test(\"Electric order exists\", () => {\r",
 							"    const e_order = jsonData.filter(item => item.id == pm.variables.get(\"electric_order_id\"));\r",
 							"    console.log(e_order);\r",
+							"\r",
+							"pm.test(\"Electric order exists\", () => {\r",
 							"    const expected_order = {\r",
 							"        \"Id\": pm.variables.get(\"electric_order_id\"),\r",
 							"        \"fuel\": \"Elec\",\r",
