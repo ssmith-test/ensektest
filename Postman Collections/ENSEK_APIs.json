@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "a017b62e-2f68-4ea7-8219-bbe03ea685ae",
+		"name": "ENSEK APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorise",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e2104044-019e-4e2b-8d2f-91b15c15c673",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "c2350d2d-6640-435f-bc83-ff1eb320d997",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test\",\r\n    \"password\" : \"testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://qacandidatetest.ensek.io/ENSEK/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Data",
+			"_postman_id": "05247ed1-353e-48b0-a1c5-60124b0ff21e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": "https://qacandidatetest.ensek.io/ENSEK/reset"
+			},
+			"response": []
+		},
+		{
+			"name": "Order 20 Electricity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30a25f2e-9695-4831-a89c-60e6567c37e5",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var order_id = jsonData.message.split(\" \").pop().replace(\".\", \"\");\r",
+							"postman.setEnvironmentVariable(\"electric_order_id\", order_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "86bbb792-ef24-4ed0-a8ab-a06abaa88084",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://qacandidatetest.ensek.io/ENSEK/buy/3/20"
+			},
+			"response": []
+		},
+		{
+			"name": "Order 300 Gas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30a25f2e-9695-4831-a89c-60e6567c37e5",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var order_id = jsonData.message.split(\" \").pop().replace(\".\", \"\");\r",
+							"postman.setEnvironmentVariable(\"gas_order_id\", order_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "a008f011-8a47-4856-836b-edc1a2ae7a6d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://qacandidatetest.ensek.io/ENSEK/buy/1/300"
+			},
+			"response": []
+		},
+		{
+			"name": "Order 40 Nuclear",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30a25f2e-9695-4831-a89c-60e6567c37e5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "f5b9bf4d-d9a3-49fd-8c6e-19036e191f5e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://qacandidatetest.ensek.io/ENSEK/buy/2/40"
+			},
+			"response": []
+		},
+		{
+			"name": "Order 3 Oil",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30a25f2e-9695-4831-a89c-60e6567c37e5",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var order_id = jsonData.message.split(\" \").pop().replace(\".\", \"\");\r",
+							"postman.setEnvironmentVariable(\"oil_order_id\", order_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "0766cec7-2b68-4e3e-ac7a-b6a32e6c0233",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://qacandidatetest.ensek.io/ENSEK/buy/4/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "3e5b3357-60b6-4f7c-ad14-778dd74a2dc9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://qacandidatetest.ensek.io/ENSEK/orders"
+			},
+			"response": []
+		}
+	]
+}
