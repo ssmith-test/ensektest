@@ -248,7 +248,7 @@
 							"pm.test(\"How many orders created before today?\", () => {\r",
 							"    var order_count = 0;\r",
 							"    const offset = new Date().getTimezoneOffset();\r",
-							"    const today_gmt = Date().toUTCString();\r",
+							"    const today_gmt = date().toUTCString();\r",
 							"    const today_midnight = new Date(today_gmt).setHours(0,0-offset,0,0);\r",
 							"    const today = new Date(today_midnight).toUTCString();\r",
 							"\r",
