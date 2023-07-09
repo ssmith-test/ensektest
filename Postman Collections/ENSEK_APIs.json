@@ -217,6 +217,7 @@
 							"\r",
 							"pm.test(\"Electric order exists\", () => {\r",
 							"    const e_order = jsonData.filter(item => item.id == pm.variables.get(\"electric_order_id\"));\r",
+							"    console.log(e_order);\r",
 							"    const expected_order = {\r",
 							"        \"Id\": pm.variables.get(\"electric_order_id\"),\r",
 							"        \"fuel\": \"Elec\",\r",
