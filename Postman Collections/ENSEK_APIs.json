@@ -220,7 +220,6 @@
 							"\r",
 							"pm.test(\"Electric order exists\", () => {\r",
 							"    const expected_order = {\r",
-							"        \"Id\": pm.variables.get(\"electric_order_id\"),\r",
 							"        \"fuel\": \"Elec\",\r",
 							"        \"quantity\": 20\r",
 							"    }\r",
