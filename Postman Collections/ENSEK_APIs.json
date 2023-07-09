@@ -265,10 +265,6 @@
 							"                order_count++;\r",
 							"            }\r",
 							"    };\r",
-							"    // console.log(today);\r",
-							"    // console.log(new Date(jsonData[0].time).toUTCString())\r",
-							"    // console.log(today > jsonData[0].time)\r",
-							"\r",
 							"    console.log(order_count + \" orders were created before the current date\");\r",
 							"})\r",
 							""
