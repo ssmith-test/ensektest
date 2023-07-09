@@ -214,6 +214,7 @@
 						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
+							"console.log(jsonData);\r",
 							"    const e_order = jsonData.filter(item => item.id == pm.variables.get(\"electric_order_id\"));\r",
 							"    console.log(e_order);\r",
 							"\r",
