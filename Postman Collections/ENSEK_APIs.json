@@ -248,7 +248,7 @@
 							"pm.test(\"How many orders created before today?\", () => {\r",
 							"    var order_count = 0;\r",
 							"    const todaynum = new Date().setHours(0,0,0,0);\r",
-							"    const today = newDate(todaynum).toUTCString();\r",
+							"    const today = new Date(todaynum).toUTCString();\r",
 							"\r",
 							"    // const timeArray = jsonData.map( function (obj) {\r",
 							"    //     if()\r",
