@@ -20,7 +20,7 @@
 					}
 				}
 			],
-			"_postman_id": "c2350d2d-6640-435f-bc83-ff1eb320d997",
+			"id": "c2350d2d-6640-435f-bc83-ff1eb320d997",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "Reset Data",
-			"_postman_id": "05247ed1-353e-48b0-a1c5-60124b0ff21e",
+			"id": "05247ed1-353e-48b0-a1c5-60124b0ff21e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -69,10 +69,7 @@
 							"value": "",
 							"type": "text"
 						}
-					],
-					"options": {
-						"formdata": {}
-					}
+					]
 				},
 				"url": "https://qacandidatetest.ensek.io/ENSEK/reset"
 			},
@@ -94,7 +91,7 @@
 					}
 				}
 			],
-			"_postman_id": "86bbb792-ef24-4ed0-a8ab-a06abaa88084",
+			"id": "86bbb792-ef24-4ed0-a8ab-a06abaa88084",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -127,7 +124,7 @@
 					}
 				}
 			],
-			"_postman_id": "a008f011-8a47-4856-836b-edc1a2ae7a6d",
+			"id": "a008f011-8a47-4856-836b-edc1a2ae7a6d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -158,7 +155,7 @@
 					}
 				}
 			],
-			"_postman_id": "f5b9bf4d-d9a3-49fd-8c6e-19036e191f5e",
+			"id": "f5b9bf4d-d9a3-49fd-8c6e-19036e191f5e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -191,7 +188,7 @@
 					}
 				}
 			],
-			"_postman_id": "0766cec7-2b68-4e3e-ac7a-b6a32e6c0233",
+			"id": "0766cec7-2b68-4e3e-ac7a-b6a32e6c0233",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -216,14 +213,23 @@
 					"script": {
 						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
 						"exec": [
-							"var jsonData = JSON.parse(responseBody);\r",
+							"// var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"// pm.test(\"Electric order exists\", () => {\r",
+							"//     const expectedOrder = {\r",
+							"//         \"fuel\": \r",
+							"//     }\r",
+							"// })\r",
+							"\r",
+							"\r",
+							"// const e_order = jsonData.filter(item => item.id === pm.variables.get(\"electric_order_id\"));\r",
 							""
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
-			"_postman_id": "3e5b3357-60b6-4f7c-ad14-778dd74a2dc9",
+			"id": "3e5b3357-60b6-4f7c-ad14-778dd74a2dc9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
