@@ -255,8 +255,6 @@
 							"\r",
 							"    const order_times = jsonData.map(obj => obj.time);\r",
 							"\r",
-							"    console.log(\"total orders: \" + order_times.count());\r",
-							"\r",
 							"    for(var i = 0; i < order_times.count(); i++) {\r",
 							"        const t = jsonData[i].time;\r",
 							"        if(new Date(t) < new Date(today))\r",
@@ -264,7 +262,7 @@
 							"                order_count++;\r",
 							"            }\r",
 							"    };\r",
-							"    console.log(order_count + \" orders were created before the current date\");\r",
+							"    console.log(order_count + \" orders were created before the current date, out of total \" + order_times.count());\r",
 							"})\r",
 							""
 						],
