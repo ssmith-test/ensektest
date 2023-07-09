@@ -257,7 +257,7 @@
 							"\r",
 							"    for(var i = 0; i < jsonData.count(); i++) {\r",
 							"        if(jsonData[i].time < today)\r",
-							"            console.log(obj.time)\r",
+							"            console.log(jsonData[i].time)\r",
 							"            order_count++;\r",
 							"    };\r",
 							"    // console.log(today);\r",
