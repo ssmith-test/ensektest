@@ -251,7 +251,7 @@
 							"    console.log(todaybst);\r",
 							"    const todaygmt = new Date(todaybst).toUTCString();\r",
 							"    console.log(todaygmt);\r",
-							"    const todaynum = new Date(todaygmt).setHours(0,0,0,0);\r",
+							"    const todaynum = new Date(todaygmt).setHours(1,0,0,0);\r",
 							"    const today = new Date(todaynum).toUTCString();\r",
 							"\r",
 							"    // const timeArray = jsonData.map( function (obj) {\r",
