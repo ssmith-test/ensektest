@@ -254,7 +254,7 @@
 							"    // console.log(timeArray)\r",
 							"    var today = new Date();\r",
 							"    console.log(today);\r",
-							"    console.log(jsonData[0].time)\r",
+							"    console.log(new Date().parse(jsonData[0].time))\r",
 							"    console.log(today < jsonData[0].time)\r",
 							"    // pm.expect(new Date((epochScheduledDateTime) * 1000)).to.be.within((new Date(\"Tue Nov 2 2020 18:00:00 GMT-0600 (Central Standard Time)\")), (new Date(\"Tue Nov 03 2020 20:00:00 GMT-0600 (Central Standard Time)\")));\r",
 							"\r",
