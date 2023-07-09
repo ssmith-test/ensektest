@@ -217,7 +217,6 @@
 							"const e_order = jsonData.filter(item => item.Id === pm.variables.get(\"electric_order_id\"))[0];\r",
 							"const g_order = jsonData.filter(item => item.id === pm.variables.get(\"gas_order_id\"))[0];\r",
 							"const o_order = jsonData.filter(item => item.Id === pm.variables.get(\"oil_order_id\"))[0];\r",
-							"// console.log(g_order);\r",
 							"\r",
 							"pm.test(\"Electric order exists and is correct\", () => {\r",
 							"    const expected_order = {\r",
