@@ -251,7 +251,6 @@
 							"    const today_gmt = new Date().toUTCString();\r",
 							"    const today_midnight = new Date(today_gmt).setHours(0,0-offset,0,0);\r",
 							"    const today = new Date(today_midnight).toUTCString();\r",
-							"\r",
 							"    const order_times = jsonData.map(obj => obj.time);\r",
 							"\r",
 							"    for(var i = 0; i < order_times.count(); i++) {\r",
