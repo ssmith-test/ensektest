@@ -254,7 +254,6 @@
 							"    const today = new Date(todaynum).toUTCString();\r",
 							"\r",
 							"    const order_times = jsonData.map(obj => obj.time);\r",
-							"    console.log(order_times)\r",
 							"\r",
 							"    console.log(\"total orders: \" + order_times.count());\r",
 							"\r",
