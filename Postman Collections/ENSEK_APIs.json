@@ -213,16 +213,21 @@
 					"script": {
 						"id": "d242808f-94f9-4cd7-a7e0-834bc12ad340",
 						"exec": [
-							"// var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"const e_order = jsonData.filter(item => item.id === pm.variables.get(\"electric_order_id\"));\r",
 							"\r",
-							"// pm.test(\"Electric order exists\", () => {\r",
-							"//     const expectedOrder = {\r",
-							"//         \"fuel\": \r",
-							"//     }\r",
-							"// })\r",
+							"pm.test(\"Electric order exists\", () => {\r",
+							"    const expected_order = {\r",
+							"        \"Id\": pm.variables.get(\"electric_order_id\"),\r",
+							"        \"fuel\": \"Elec\",\r",
+							"        \"quantity\": 20\r",
+							"    }\r",
+							"    pm.expect(e_order).to.include(e_order);\r",
+							"    pm.expect(e_order).to.have.property('time');\r",
+							"})\r",
 							"\r",
 							"\r",
-							"// const e_order = jsonData.filter(item => item.id === pm.variables.get(\"electric_order_id\"));\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
