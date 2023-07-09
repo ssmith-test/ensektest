@@ -246,7 +246,7 @@
 							"})\r",
 							"\r",
 							"pm.test(\"How many orders created before today?\", () => {\r",
-							"    var order_count;\r",
+							"    var order_count = 0;\r",
 							"    console.log(order_count, \" orders were created before the current date\");\r",
 							"})\r",
 							""
