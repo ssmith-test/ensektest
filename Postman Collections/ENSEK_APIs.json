@@ -216,7 +216,7 @@
 							"var jsonData = JSON.parse(responseBody);\r",
 							"const e_order = jsonData.filter(item => item.Id === pm.variables.get(\"electric_order_id\"))[0];\r",
 							"const g_order = jsonData.filter(item => item.Id === pm.variables.get(\"gas_order_id\"))[0];\r",
-							"// console.log(e_order);\r",
+							"console.log(g_order);\r",
 							"\r",
 							"// pm.test(\"Electric order exists and is correct\", () => {\r",
 							"//     const expected_order = {\r",
