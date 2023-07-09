@@ -218,7 +218,7 @@
 							"// console.log(e_order);\r",
 							"\r",
 							"pm.test(\"Electric order exists and is correct\", () => {\r",
-							"    const order_fuel = obj.e_order.fuel;\r",
+							"    const order_fuel = e_order.fuel;\r",
 							"    pm.expect(order_fuel).to.eql(\"Elec\");\r",
 							"    pm.expect(e_order).to.have.property('time');\r",
 							"})\r",
