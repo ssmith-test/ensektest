@@ -261,7 +261,7 @@
 							"    for(var i = 0; i < order_times.count(); i++) {\r",
 							"        const t = jsonData[i].time;\r",
 							"        console.log(t);\r",
-							"        if(t < today)\r",
+							"        if(new Date(t) < new Date(today))\r",
 							"            {\r",
 							"                order_count++;\r",
 							"            }\r",
