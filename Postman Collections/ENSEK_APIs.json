@@ -215,7 +215,7 @@
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
 							"const e_order = jsonData.filter(item => item.Id === pm.variables.get(\"electric_order_id\"));\r",
-							"// console.log(e_order);\r",
+							"console.log(e_order);\r",
 							"\r",
 							"pm.test(\"Electric order exists and is correct\", () => {\r",
 							"    const order_fuel = e_order.fuel;\r",
