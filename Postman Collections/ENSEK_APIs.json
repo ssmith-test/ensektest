@@ -247,7 +247,11 @@
 							"\r",
 							"pm.test(\"How many orders created before today?\", () => {\r",
 							"    var order_count = 0;\r",
-							"    console.log(order_count + \" orders were created before the current date\");\r",
+							"    const timeArray = jsonData.map(obj => obj.time);\r",
+							"    console.log(timeArray)\r",
+							"    // pm.expect(new Date((epochScheduledDateTime) * 1000)).to.be.within((new Date(\"Tue Nov 2 2020 18:00:00 GMT-0600 (Central Standard Time)\")), (new Date(\"Tue Nov 03 2020 20:00:00 GMT-0600 (Central Standard Time)\")));\r",
+							"\r",
+							"    // console.log(order_count + \" orders were created before the current date\");\r",
 							"})\r",
 							""
 						],
