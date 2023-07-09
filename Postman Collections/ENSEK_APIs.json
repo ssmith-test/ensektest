@@ -253,7 +253,7 @@
 							"    const todaynum = new Date(todaygmt).setHours(0,0-offset,0,0);\r",
 							"    const today = new Date(todaynum).toUTCString();\r",
 							"\r",
-							"    console.log(\"total orders: \" + jsonData.length());\r",
+							"    console.log(\"total orders: \" + jsonData.count());\r",
 							"\r",
 							"    jsonData.map( function (obj) {\r",
 							"        if(obj.time < today)\r",
